@@ -6,4 +6,4 @@ xp_pen_hack: xp_pen_hack.cpp
 	g++ --std=c++20 -o xp_pen_hack xp_pen_hack.cpp
 
 install: xp_pen_hack
-	install xp_pen_hack $(PREFIX)/bin
+	install xp_pen_hack $(DESTDIR)$(PREFIX)/bin
