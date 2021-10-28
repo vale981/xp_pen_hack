@@ -30,11 +30,11 @@ std::optional<std::string> find_event_number() {
       continue;
     }
 
-    for (; line.rfind("B: KEY", 0) != 0 && line.rfind("I", 0) != 0;
+    for (; line.rfind("B: EV", 0) != 0 && line.rfind("I", 0) != 0;
          getline(devices, line)) {
     };
 
-    if (line.rfind("B: KEY=c03", 0) == 0)
+    if (line.rfind("B: EV=1b", 0) == 0)
       return number;
   }
 
